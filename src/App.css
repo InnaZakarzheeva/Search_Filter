@@ -32,6 +32,7 @@ input{
     height: 50px;
     border-radius: 10px;
     font-size: 16px;
+    outline: none;
 }
 .div-wrapper{
     display: flex;
