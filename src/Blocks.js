@@ -1,4 +1,6 @@
 import React from 'react';
+import Button from '@material-ui/core/Button';
+import TextField from '@material-ui/core/TextField';
 
 const colorDiv = [
     {
@@ -148,12 +150,18 @@ export default class Blocks extends React.Component{
   render() {
   return (
     <div className="App">
-      <input placeholder="Search by name..." onChange={this.handleInput}/>
+      <TextField
+        label="Search by name..."
+        margin="normal"
+        variant="outlined"
+        onChange={this.handleInput}
+        style={{width: "60%"}}
+      />
       <div className="product-wrapper">
         <section className="button-wrapper">
-            <button value='' onClick={this.handleChange}>Show All Items</button>
-            <button value='red' onClick={this.handleChange}>Show Red Items</button>
-            <button value='green' onClick={this.handleChange}>Show Green Items</button>
+            <Button variant="outlined" color="primary" value='' onClick={this.handleChange}>All Items</Button>
+            <Button variant="outlined" color="primary" value='red' onClick={this.handleChange}>Red Items</Button>
+            <Button variant="outlined" color="primary" value='green' onClick={this.handleChange}>Green Items</Button>
         </section>
         <section className="div-wrapper">
         {this.state.filterArr.map( (item, index) => (
